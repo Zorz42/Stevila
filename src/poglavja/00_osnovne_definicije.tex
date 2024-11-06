@@ -1,6 +1,6 @@
 % definicija podmnožice
 \begin{definicija}
-    $A \subseteq B \iff a \in A \Longrightarrow b \in B$.
+    $A \subseteq B \iff a \in A \implies b \in B$.
 \end{definicija}
 
 \begin{definicija}
@@ -13,7 +13,7 @@
 Dokaz:
 \begin{align*}
     A = B &\iff A \subseteq B \wedge B \subseteq A \\
-    &\iff \forall x (x \in A \Longrightarrow x \in B) \wedge \forall x (x \in B \Longrightarrow x \in A) \\
+    &\iff \forall x (x \in A \implies x \in B) \wedge \forall x (x \in B \implies x \in A) \\
     &\iff \forall x (x \in A \iff x \in B)
 \end{align*}
 

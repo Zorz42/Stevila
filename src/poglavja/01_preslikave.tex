@@ -27,3 +27,31 @@
         \item Preslikava $f: A \to B$ je bijektivna, če je injektivna in surjektivna.
     \end{enumerate}
 \end{definicija}
+
+% Definicija kompozituma preslikav
+\begin{definicija}
+    Naj bosta $f: A \to B$ in $g: B \to C$ preslikavi. Kompozitum preslikav $f$ in $g$ je preslikava $g \circ f: A \to C$, definirana s predpisom $(g \circ f)(x) = g(f(x))$.
+\end{definicija}
+
+% Definicija identične preslikave
+\begin{definicija}
+    Naj bo $A$ množica. Identiteta na množici $A$ je preslikava $\text{id}_A: A \to A$, definirana s predpisom $\text{id}_A(x) = x$.
+\end{definicija}
+
+% Definicija levega in desnega inverza
+\begin{definicija}
+    Naj bo $f: A \to B$ preslikava.
+    Preslikava $g: B \to A$ je levi inverz preslikave $f$, če je $g \circ f = \text{id}_A$.
+    Preslikava $h: B \to A$ je desni inverz preslikave $f$, če je $f \circ h = \text{id}_B$.
+    Če je inverz levi in desni, mu pravimo samo inverz in ga označimo z $f^{-1}$.
+\end{definicija}
+
+\begin{trditev}
+    Naj bo $f$ preslikava.
+    $f$ ima levi inverz $\iff f$ je injektivna.
+\end{trditev}
+Dokaz: \\
+$\implies$: \\
+Naj bo $g$ levi inverz preslikave $f$.
+$f(x) = f(y) \implies g(f(x)) = g(f(y)) \implies x = y$. \\
+
