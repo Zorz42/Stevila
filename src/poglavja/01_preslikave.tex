@@ -1,0 +1,29 @@
+% Definicija relacije
+\begin{definicija}
+    Relacija $R$ je množica urejenih parov, tj. $R \subseteq A \times B$.
+    Namesto $(a, b) \in R$ pišemo $aRb$.
+\end{definicija}
+
+% Definicija preslikave
+\begin{definicija}
+    Relacija $f \in A \times B$ je preslikava, če $\forall x \in X(\exists! y \in Y(xfy))$.
+    Namesto $xfy$ pišemo $f(x) = y$, ker ima $f(x)$ natanko eno vrednost za vsak $x$.
+    Namesto $f \in A \times B$ pišemo $f: A \to B$.
+\end{definicija}
+
+% Definicija domene in slike preslikave
+\begin{definicija}
+    Naj bo $f: A \to B$ preslikava. Množica $A$ se imenuje domena preslikave $f$ in se označuje z $\text{dom}(f)$.
+    Množica $\{f(x) | x \in A\}$ se imenuje slika preslikave $f$ in se označuje z $\text{im}(f)$.
+    Očitno velja $\text{im}(f) \subseteq B$.
+\end{definicija}
+
+% Definicija injektivne, surjektivne in bijektivne preslikave
+\begin{definicija}
+    \begin{enumerate}
+        \item Preslikava $f: A \to B$ je injektivna, če $\forall x, y \in A(f(x) = f(y) \implies x = y)$.
+        \item Preslikava $f: A \to B$ je surjektivna, če $\forall y \in B(\exists x \in A(f(x) = y))$.
+        Iz tega direktno sledi: $f$ je surjektivna $\iff \text{im}(f) = B$.
+        \item Preslikava $f: A \to B$ je bijektivna, če je injektivna in surjektivna.
+    \end{enumerate}
+\end{definicija}

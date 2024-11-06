@@ -1,6 +1,6 @@
 % definicija podmnožice
 \begin{definicija}
-    $A \subseteq B \iff \forall a \in A \Longrightarrow b \in B$.
+    $A \subseteq B \iff a \in A \Longrightarrow b \in B$.
 \end{definicija}
 
 \begin{definicija}
@@ -67,3 +67,19 @@ Dokaz:
     &\iff a = c \wedge b = d
 \end{align*}
 
+% definicija kartezicnega produkta
+\begin{definicija}
+    $A \times B = \bigcup\{\{(a,b) | b \in B\} | a \in A\}$.
+\end{definicija}
+
+\begin{trditev}
+    $(a, b) \in A \times B \iff a \in A \wedge b \in B$
+\end{trditev}
+
+Dokaz:
+\begin{align*}
+    (a, b) \in A \times B &\iff (a, b) \in \bigcup\{\{(a,b) | b \in B\} | a \in A\} \\
+    &\iff \exists x (x \in \{\{(a,b) | b \in B\} | a \in A\} \wedge (a, b) \in x) \\
+    &\iff \exists x (x = \{(a,b) | b \in B\} \wedge a \in A \wedge b \in B) \\
+    &\iff a \in A \wedge b \in B
+\end{align*}
