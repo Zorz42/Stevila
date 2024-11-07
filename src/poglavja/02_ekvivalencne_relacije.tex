@@ -1,0 +1,55 @@
+\begin{definicija}
+    Naj bo $\sim \subseteq A \times A$. $\sim$ je ekvivalenčna relacija, če velja:
+    \begin{itemize}
+        \item $a\sim a$ (refleksivnost)
+        \item $a\sim b \implies b\sim a$ (simetričnost)
+        \item $a\sim b \wedge b\sim c \implies a\sim c$ (tranzitivnost)
+    \end{itemize}
+\end{definicija}
+
+\begin{definicija}
+    Naj bo $\sim$ ekvivalenčna relacija na množici $A$.
+    Množico $[a] = \{x \in A | x \sim a\}$ imenujemo ekvivalenčni razred elementa $a$.
+\end{definicija}
+
+\begin{definicija}
+    Naj bo $\sim$ ekvivalenčna relacija na množici $A$.
+    $\{[x] | x \in A\}$ označimo z $A/\sim$.
+\end{definicija}
+
+\begin{trditev}
+    $[a] = [b] \iff a\sim b$
+\end{trditev}
+Dokaz:\\
+$\implies$:
+\begin{align*}
+    [a] = [b] &\implies \{x \in A | x \sim a\} = \{x \in A | x \sim b\} \\
+    &\implies \forall x \in A(x \sim a \iff x \sim b) \\
+    &\implies a \sim a \iff a \sim b \\
+    &\implies a\sim b
+\end{align*}
+
+$\impliedby$:
+\begin{align*}
+    a\sim b &\implies a \in \{x \in A | x \sim b\} \wedge b \in \{x \in A | x \sim a\}
+\end{align*}
+Ker $x \sim a \wedge a \sim b \implies x \sim b$, velja: $\{x \in A | x \sim a\} \subseteq \{x \in A | x \sim b\}$.
+Podobno velja: $\{x \in A | x \sim b\} \subseteq \{x \in A | x \sim a\}$.
+\begin{align*}
+    a \in \{x \in A | x \sim b\} \wedge b \in \{x \in A | x \sim a\} &\implies [a] \subseteq [b] \wedge [b] \subseteq [a] \\
+    &\implies [a] = [b]
+\end{align*}
+
+\begin{trditev}
+    $[a] \cap [b] \neq \emptyset \iff [a] = [b]$
+\end{trditev}
+
+\begin{trditev}
+    $A = \bigcup_{x \in A} [x]$
+\end{trditev}
+
+\begin{trditev}
+    $[a] = A \iff \forall x \in A(a\sim x)$
+\end{trditev}
+
+

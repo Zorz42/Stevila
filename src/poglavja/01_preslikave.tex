@@ -30,13 +30,37 @@
 
 % Definicija kompozituma preslikav
 \begin{definicija}
-    Naj bosta $f: A \to B$ in $g: B \to C$ preslikavi. Kompozitum preslikav $f$ in $g$ je preslikava $g \circ f: A \to C$, definirana s predpisom $(g \circ f)(x) = g(f(x))$.
+    Naj bosta $f: A \to B$ in $g: B \to C$ preslikavi.
+    Kompozitum preslikav $f$ in $g$ je preslikava $g \circ f: A \to C$, definirana s predpisom $(g \circ f)(x) = g(f(x))$.
 \end{definicija}
 
 % Definicija identične preslikave
 \begin{definicija}
-    Naj bo $A$ množica. Identiteta na množici $A$ je preslikava $\text{id}_A: A \to A$, definirana s predpisom $\text{id}_A(x) = x$.
+    Naj bo $A$ množica.
+    Identiteta na množici $A$ je preslikava $\text{id}_A: A \to A$, definirana s predpisom $\text{id}_A(x) = x$.
 \end{definicija}
+
+
+\begin{trditev}
+    Naj bodo $f: A \to B$, $g: B \to C$ in $h: C \to D$ preslikave.
+    \begin{enumerate}
+        \item Kompozitum preslikav je asociativen: $(h \circ g) \circ f = h \circ (g \circ f)$.
+        \item Identiteta je enota za kompozitum: $\text{id}_B \circ f = f = f \circ \text{id}_A$.
+    \end{enumerate}
+\end{trditev}
+Dokaz:
+\begin{enumerate}
+    \item $(h \circ g) \circ f = h \circ (g \circ f)$
+    \begin{align*}
+        ((h \circ g) \circ f)(x) &= (h \circ g)(f(x)) = h(g(f(x))) \\
+        (h \circ (g \circ f))(x) &= h((g \circ f)(x)) = h(g(f(x)))
+    \end{align*}
+    \item $\text{id}_B \circ f = f = f \circ \text{id}_A$
+    \begin{align*}
+        (\text{id}_B \circ f)(x) &= \text{id}_B(f(x)) = f(x) \\
+        (f \circ \text{id}_A)(x) &= f(\text{id}_A(x)) = f(x)
+    \end{align*}
+\end{enumerate}
 
 % Definicija levega in desnega inverza
 \begin{definicija}
@@ -54,4 +78,63 @@ Dokaz: \\
 $\implies$: \\
 Naj bo $g$ levi inverz preslikave $f$.
 $f(x) = f(y) \implies g(f(x)) = g(f(y)) \implies x = y$. \\
+
+$\impliedby$: \\
+Naj bo $f$ injektivna.
+Definirajmo relacijo $g \subseteq \text{im}(f) \times A$ s predpisom $g = \{(f(x), x) | x \in A\}$.
+Dokažimo, da je $g$ funkcija:
+\begin{itemize}
+    \item $\forall y \in \text{im}(f) \exists x \in A(y = f(x))$, ker je $y \in \text{im}(f)$.
+    \item $\forall y \in \text{im}(f) \exists! x \in A(y = f(x))$, ker je $f$ injektivna.
+\end{itemize}
+Dokažimo, da je $g$ levi inverz preslikave $f$:
+\begin{align*}
+    (g \circ f)(x) &= g(f(x)) = g(y) = x
+\end{align*}
+
+\begin{trditev}
+    Naj bo $f$ preslikava.
+    $f$ ima desni inverz $\iff f$ je surjektivna.
+\end{trditev}
+Dokaz: \\
+$\implies$: \\
+Naj bo $g$ desni inverz preslikave $f$.
+$f(g(x)) = x$ iz tega sledi, da za vsak $y \in B$ obstaja $x \in A$, da je $f(x) = y$, saj je to kar $g(y)$. \\
+
+$\impliedby$: \\
+Naj bo $f$ surjektivna.
+Definirajmo relacijo $g \subseteq B \times A$ s predpisom $g = \{(f(x), x) | x \in A\}$.
+Dokažimo, da je $g$ funkcija:
+\begin{itemize}
+    \item $\forall y \in B \exists! x \in A(y = f(x))$, ker je $f$ surjektivna funkcija.
+\end{itemize}
+
+\begin{trditev}
+    Če obstajata levi inverz in desni inverz preslikave $f$, sta enaka.
+\end{trditev}
+Dokaz:
+\begin{align*}
+    g \circ f &= \text{id}_A \\
+    f \circ h &= \text{id}_B \\
+    g = g \circ \text{id}_B &= g \circ (f \circ h) = (g \circ f) \circ h = \text{id}_A \circ h = h
+\end{align*}
+
+\begin{trditev}
+    $f$ je bijektivna preslikava $\iff f$ ima inverz.
+\end{trditev}
+Dokaz:
+\begin{align*}
+    f \text{ je bijektivna} &\iff f \text{ je injektivna in surjektivna} \\
+    &\iff f \text{ ima levi inverz in desni inverz} \\
+    &\iff f \text{ ima inverz}
+\end{align*}
+
+\begin{trditev}
+    Če ima $f$ inverz, je en sam.
+    Označimo ga z $f^{-1}$.
+\end{trditev}
+Dokaz:
+Naj bosta $g$ in $h$ inverza preslikave $f$.
+Ker je $g$ levi inverz, in $h$ desni inverz, je $g = h$.
+
 
