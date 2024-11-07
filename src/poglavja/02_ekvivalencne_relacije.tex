@@ -18,6 +18,14 @@
 \end{definicija}
 
 \begin{trditev}
+    $a \in [a]$
+\end{trditev}
+Dokaz:
+\begin{align*}
+    a\sim a &\implies a \in [a]
+\end{align*}
+
+\begin{trditev}
     $[a] = [b] \iff a\sim b$
 \end{trditev}
 Dokaz:\\
@@ -43,6 +51,15 @@ Podobno velja: $\{x \in A | x \sim b\} \subseteq \{x \in A | x \sim a\}$.
 \begin{trditev}
     $[a] \cap [b] \neq \emptyset \iff [a] = [b]$
 \end{trditev}
+Dokaz: \\
+$\impliedby$: \\
+Je očitno, ker noben ekvivalenčen razred ni prazen, saj $[a]$ vsebuje vsaj $a$.\\
+\\
+$\implies$:\\
+Naj bo $[a] \cap [b] \neq \emptyset$.
+Vzemimo $x \in [a] \cap [b]$.
+Če nista enaka, potem obstaja $y \in [a] \wedge y \notin [b]$.
+Če $y \notin [a] \wedge y \in [b]$ velja podoben dokaz, zato bomo gledali samo prvo.
 
 \begin{trditev}
     $A = \bigcup_{x \in A} [x]$
@@ -51,5 +68,6 @@ Podobno velja: $\{x \in A | x \sim b\} \subseteq \{x \in A | x \sim a\}$.
 \begin{trditev}
     $[a] = A \iff \forall x \in A(a\sim x)$
 \end{trditev}
+
 
 
