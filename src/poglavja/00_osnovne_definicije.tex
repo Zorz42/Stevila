@@ -10,44 +10,48 @@
 \begin{trditev}
     $A = B \iff \forall x (x \in A \iff x \in B)$.
 \end{trditev}
-Dokaz:
+\begin{dokaz}
 \begin{align*}
     A = B &\iff A \subseteq B \wedge B \subseteq A \\
     &\iff \forall x (x \in A \implies x \in B) \wedge \forall x (x \in B \implies x \in A) \\
     &\iff \forall x (x \in A \iff x \in B)
 \end{align*}
+\end{dokaz}
 
 \begin{trditev}
     $\{a\} = \{b\} \iff a = b$
 \end{trditev}
-Dokaz:
+\begin{dokaz}
 \begin{align*}
     \{a\} = \{b\} &\iff \{a\} \subseteq \{b\} \wedge \{b\} \subseteq \{a\} \\
     &\iff a \in \{b\} \wedge b \in \{a\} \\
     &\iff a = b
 \end{align*}
+\end{dokaz}
 
 \begin{trditev}
     $\{a, b\} = \{c, d\} \iff (a = c \wedge b = d) \vee (a = d \wedge b = c)$
 \end{trditev}
-Dokaz:
+\begin{dokaz}
 \begin{align*}
     \{a, b\} = \{c, d\} &\iff \{a, b\} \subseteq \{c, d\} \wedge \{c, d\} \subseteq \{a, b\} \\
     &\iff a \in \{c, d\} \wedge b \in \{c, d\} \wedge c \in \{a, b\} \wedge d \in \{a, b\} \\
     &\iff (a = c \vee a = d) \wedge (b = c \vee b = d) \wedge (c = a \vee c = b) \wedge (d = a \vee d = b) \\
     &\iff (a = c \wedge b = d) \vee (a = d \wedge b = c)
 \end{align*}
+\end{dokaz}
 
 \begin{trditev}
     $\{a, b\} = \{c\} \iff a = b = c$
 \end{trditev}
-Dokaz:
+\begin{dokaz}
 \begin{align*}
     \{a, b\} = \{c\} &\iff \{a, b\} \subseteq \{c\} \wedge \{c\} \subseteq \{a, b\} \\
     &\iff a \in \{c\} \wedge b \in \{c\} \wedge c \in \{a, b\} \\
     &\iff a = c \wedge b = c \wedge c = a \vee c = b \\
     &\iff a = b = c
 \end{align*}
+\end{dokaz}
 
 % definicija urejenega para
 \begin{definicija}
@@ -57,7 +61,7 @@ Dokaz:
 \begin{trditev}
     $(a, b) = (c, d) \iff a = c \wedge b = d$
 \end{trditev}
-Dokaz:
+\begin{dokaz}
 \begin{align*}
     (a, b) = (c, d) &\iff \{\{a\},\{a,b\}\} = \{\{c\},\{c,d\}\} \\
     &\iff (\{a\} = \{c\} \wedge \{a,b\} = \{c,d\}) \vee (\{a\} = \{c,d\} \wedge \{a,b\} = \{c\}) \\
@@ -66,6 +70,7 @@ Dokaz:
     &\iff (a = c \wedge (b = d \vee (a = d \wedge b = a))) \\
     &\iff a = c \wedge b = d
 \end{align*}
+\end{dokaz}
 
 % definicija kartezicnega produkta
 \begin{definicija}
@@ -75,11 +80,11 @@ Dokaz:
 \begin{trditev}
     $(a, b) \in A \times B \iff a \in A \wedge b \in B$
 \end{trditev}
-
-Dokaz:
+\begin{dokaz}
 \begin{align*}
     (a, b) \in A \times B &\iff (a, b) \in \bigcup\{\{(a,b) | b \in B\} | a \in A\} \\
     &\iff \exists x (x \in \{\{(a,b) | b \in B\} | a \in A\} \wedge (a, b) \in x) \\
     &\iff \exists x (x = \{(a,b) | b \in B\} \wedge a \in A \wedge b \in B) \\
     &\iff a \in A \wedge b \in B
 \end{align*}
+\end{dokaz}

@@ -48,7 +48,7 @@
         \item Identiteta je enota za kompozitum: $\text{id}_B \circ f = f = f \circ \text{id}_A$.
     \end{enumerate}
 \end{trditev}
-Dokaz:
+\begin{dokaz}
 \begin{enumerate}
     \item $(h \circ g) \circ f = h \circ (g \circ f)$
     \begin{align*}
@@ -61,6 +61,7 @@ Dokaz:
         (f \circ \text{id}_A)(x) &= f(\text{id}_A(x)) = f(x)
     \end{align*}
 \end{enumerate}
+\end{dokaz}
 
 % Definicija levega in desnega inverza
 \begin{definicija}
@@ -74,7 +75,7 @@ Dokaz:
     Naj bo $f$ preslikava.
     $f$ ima levi inverz $\iff f$ je injektivna.
 \end{trditev}
-Dokaz: \\
+\begin{dokaz}
 $\implies$: \\
 Naj bo $g$ levi inverz preslikave $f$.
 $f(x) = f(y) \implies g(f(x)) = g(f(y)) \implies x = y$. \\
@@ -91,12 +92,13 @@ Dokažimo, da je $g$ levi inverz preslikave $f$:
 \begin{align*}
     (g \circ f)(x) &= g(f(x)) = g(y) = x
 \end{align*}
+\end{dokaz}
 
 \begin{trditev}
     Naj bo $f$ preslikava.
     $f$ ima desni inverz $\iff f$ je surjektivna.
 \end{trditev}
-Dokaz: \\
+\begin{dokaz}
 $\implies$: \\
 Naj bo $g$ desni inverz preslikave $f$.
 $f(g(x)) = x$ iz tega sledi, da za vsak $y \in B$ obstaja $x \in A$, da je $f(x) = y$, saj je to kar $g(y)$. \\
@@ -108,34 +110,38 @@ Dokažimo, da je $g$ funkcija:
 \begin{itemize}
     \item $\forall y \in B \exists! x \in A(y = f(x))$, ker je $f$ surjektivna funkcija.
 \end{itemize}
+\end{dokaz}
 
 \begin{trditev}
     Če obstajata levi inverz in desni inverz preslikave $f$, sta enaka.
 \end{trditev}
-Dokaz:
+\begin{dokaz}
 \begin{align*}
     g \circ f &= \text{id}_A \\
     f \circ h &= \text{id}_B \\
     g = g \circ \text{id}_B &= g \circ (f \circ h) = (g \circ f) \circ h = \text{id}_A \circ h = h
 \end{align*}
+\end{dokaz}
 
 \begin{trditev}
     $f$ je bijektivna preslikava $\iff f$ ima inverz.
 \end{trditev}
-Dokaz:
+\begin{dokaz}
 \begin{align*}
     f \text{ je bijektivna} &\iff f \text{ je injektivna in surjektivna} \\
     &\iff f \text{ ima levi inverz in desni inverz} \\
     &\iff f \text{ ima inverz}
 \end{align*}
+\end{dokaz}
 
 \begin{trditev}
     Če ima $f$ inverz, je en sam.
     Označimo ga z $f^{-1}$.
 \end{trditev}
-Dokaz:
+\begin{dokaz}
 Naj bosta $g$ in $h$ inverza preslikave $f$.
 Ker je $g$ levi inverz, in $h$ desni inverz, je $g = h$.
+\end{dokaz}
 
 \begin{definicija}
     Naj bo $f: A \to B$ preslikava.
