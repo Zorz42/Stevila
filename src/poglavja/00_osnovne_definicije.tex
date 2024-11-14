@@ -19,6 +19,16 @@
 \end{dokaz}
 
 \begin{trditev}
+    $\nexists a (a = \{a\})$
+\end{trditev}
+\begin{dokaz}
+    Predpostavimo, da obstaja tak $a$.
+    Po aksiomu regularnosti obstaja element $b \in a$, da bo $b \cap a = \emptyset$.
+    $b \in a \implies b \in \{a\} \implies b = a \implies \emptyset = b \cap a = a \cap a = a$, torej
+    $a = \emptyset$, ampak $\emptyset \neq \{\emptyset\}$, saj $\emptyset \in \{\emptyset\}$, torej je to protislovje.
+\end{dokaz}
+
+\begin{trditev}
     $\{a\} = \{b\} \iff a = b$
 \end{trditev}
 \begin{dokaz}

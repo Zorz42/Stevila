@@ -1,0 +1,69 @@
+\begin{definicija}
+    Naslednjiška funkcija: $s: a \longrightarrow \{a, \{a\}\}$
+
+    Peanovi Aksiomi:
+    \begin{itemize}
+        \item $\emptyset = 0 \in \mathbb{N}$
+        \item $a \in \mathbb{N} \implies s(a) \in \mathbb{N}$
+        \item $(A \subseteq \mathbb{N} \wedge 0 \in A \wedge n \in A \implies s(n) \in A) \implies A = \mathbb{N}$
+    \end{itemize}
+\end{definicija}
+
+\begin{trditev}
+    Obstaja natanko ena množica, ki zadošča Peanovim Aksiomom.
+\end{trditev}
+\begin{dokaz}
+    Obstoj:
+    Po aksiomu neskončnosti, obstaja vsaj ena množica, ki zadošča prvima dvema aksiomoma.
+    Označimo jo z $N$.
+    Definirajmo $S = \{x$ zadosti prvima dvema aksiomoma $| x \subseteq N\}$
+    $S$ je neprazna, saj $N \in S$, zato lahko rečemo $\mathbb{N} = \bigcap S$
+    Predpostavimo, da zadnji aksiom ne drži, torej obstaja nek $A \subset \mathbb{N}$, ki izpolnjuje prve dva aksioma, ki ni enak $\mathbb{N}$.
+    To je protislovje, saj $A \subset N$, zato bi $A$ moral biti v preseku, torej $N \subseteq A$, kar je pa protislovje, torej $\mathbb{N}$ res izpolnjuje zadnji aksiom.
+
+    Enoličnost:
+Predpostavimo, da obstajata dve množici, ki zadoščata Peanovim Aksiomom: $\mathbb{N}_1$ in $\mathbb{N}_2$.
+V zadnji aksiom vstavimo $\mathbb{N}_1$ in $\mathbb{N}_2$ in dobimo $\mathbb{N}_1 = \mathbb{N}_2$.
+\end{dokaz}
+
+\begin{definicija}
+    Množica naravnih števil je množica, ki zadošča Peanovim Aksiomom.
+    Označimo jo z $\mathbb{N}$.
+\end{definicija}
+
+\begin{trditev}
+    $\forall x \in \mathbb{N}. x = 0 \vee \exists y \in \mathbb{N}. s(y) = x$
+\end{trditev}
+\begin{dokaz}
+    Uporabimo indukcijo: Za $x = 0$ trditev drži.
+    Predpostavimo, da trditev drži za $x$ očitno velja, za $s(x)$, saj je $x = y$.
+\end{dokaz}
+
+\begin{trditev}
+    Preslikava $s$ je injektivna.
+\end{trditev}
+\begin{dokaz}
+    \begin{align*}
+        s(a) = s(b) \implies \\
+        \{a,\{a\}\} = \{b,\{b\}\}
+    \end{align*}
+    1. $a = b \wedge \{a\} = \{b\}$ je vredu. \\
+    2.
+    \begin{align*}
+        a = \{b\} \wedge b = \{a\} \implies \\
+        b = \{\{b\}\}
+    \end{align*}
+    Treba je samo še dokazati, da nobeno naravno število nima natanko enega elementa.
+    Za $0$ je očitno, saj $0 = \{\}$.
+    Za $x \neq 0$ obstaja $y$, da bo $s(y) = x$, torej $x = \{y, \{y\}\}$.
+    Predpostavimo, da ima $x$ en element, torej $y = \{y\}$, kar je pa protislovje.
+\end{dokaz}
+
+\begin{trditev}
+    $\nexists a. s(a) = 0$
+\end{trditev}
+\begin{dokaz}
+    $s(a) = 0 \implies \{a, \{a\}\} = \emptyset$ ampak $a \in \{a, \{a\}\} \wedge a \notin \emptyset$
+\end{dokaz}
+
+

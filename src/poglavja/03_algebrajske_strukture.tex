@@ -1,0 +1,101 @@
+\begin{definicija}
+    Naj bo $A$ množica in $\circ: A \times A \to A$ funkcija. \\
+    Namesto $\circ((a, b))$ pišemo $a \circ b$. \\
+    Če velja:
+    \begin{itemize}
+        \item $a \circ (b \circ c) = (a \circ b) \circ c$ (asociativnost)
+        \item $\exists e \in A. a \circ e = e \circ a = a$ (obstoj enote)
+    \end{itemize}
+    potem je $(A, \circ)$ monoid.
+\end{definicija}
+
+\begin{definicija}
+    Monoid $(A, \circ)$ je komutativen, če velja:
+    \begin{itemize}
+        \item $a \circ b = b \circ a$
+    \end{itemize}
+\end{definicija}
+
+\begin{definicija}
+    Naj bo $(A, \circ)$ monoid.
+    Če dodatno velja:
+    \begin{itemize}
+        \item $\forall a \in A. \exists a^{-1} \in A. a \circ a^{-1} = a^{-1} \circ a = e$
+    \end{itemize}
+    potem je $(A, \circ)$ grupa.
+\end{definicija}
+
+\begin{definicija}
+    Naj bo $(A, \circ)$ grupa.
+    Če velja:
+    \begin{itemize}
+        \item $\forall a, b \in A. a \circ b = b \circ a$
+    \end{itemize}
+    potem je $(A, \circ)$ Abelova grupa.
+\end{definicija}
+
+\begin{trditev}
+    Naj bo $(A, \circ)$ monoid.
+    Enota je enolično določena.
+\end{trditev}
+\begin{dokaz}
+    Predpostavimo, da obstajata dve enoti: $e$ in $e'$.
+    Potem $e = e \circ e' = e'$.
+\end{dokaz}
+
+\begin{trditev}
+    Naj bo $(G, \circ)$ grupa.
+    Potem ima enačba $a \circ x = b$ enolično rešitev za vsak $a, b \in G$.
+\end{trditev}
+\begin{dokaz}
+    \begin{align*}
+        a \circ x = b \iff \\
+        a^{-1} \circ (a \circ x) = a^{-1} \circ b \iff \\
+        (a^{-1} \circ a) \circ x = a^{-1} \circ b \iff \\
+        e \circ x = a^{-1} \circ b \iff \\
+        x = a^{-1} \circ b
+    \end{align*}
+\end{dokaz}
+
+\begin{trditev}
+    Naj bo $(G, \circ)$ grupa.
+    Potem velja: $a\circ b = a\circ c \implies b = c$
+\end{trditev}
+\begin{dokaz}
+    \begin{align*}
+        a\circ b = a\circ c \implies \\
+        a^{-1} \circ (a \circ b) = a^{-1} \circ (a \circ c) \implies \\
+        (a^{-1} \circ a) \circ b = (a^{-1} \circ a) \circ c \implies \\
+        e \circ b = e \circ c \implies \\
+        b = c
+    \end{align*}
+\end{dokaz}
+
+\begin{trditev}
+    Naj bo $(G, \circ)$ grupa, potem je inverz enolično določen za vsak $a \in G$ posebej.
+\end{trditev}
+\begin{dokaz}
+    Predpostavimo, da obstajata dva inverza: $b$ in $b'$.
+    Potem $b = b \circ e = b \circ (a \circ b') = (b \circ a) \circ b' = e \circ b' = b'$
+\end{dokaz}
+
+\begin{trditev}
+    Naj bo $(G, \circ)$ grupa.
+    Potem velja: $e^{-1} = e$.
+\end{trditev}
+\begin{dokaz}
+    $e = e \circ e$, zato je $e$ inverz za $e$.
+    Ker je inverz enolično določen, je $e^{-1} = e$.
+\end{dokaz}
+
+\begin{trditev}
+    Naj bo $(G, \circ)$ grupa.
+    Potem za vsak $a \in G$ velja: $(a^{-1})^{-1} = a$.
+\end{trditev}
+\begin{dokaz}
+    \begin{align*}
+        (a^{-1})^{-1} \circ a^{-1} = e = a^{-1} \circ a \implies \\
+        (a^{-1})^{-1} \circ a^{-1} = a \circ a^{-1} \implies \\
+        (a^{-1})^{-1} = a
+    \end{align*}
+\end{dokaz}
