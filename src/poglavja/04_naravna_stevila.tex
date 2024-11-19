@@ -1,5 +1,5 @@
 \begin{definicija}
-    Naslednjiška funkcija: $s: a \longrightarrow \{a, \{a\}\}$
+    Naslednjiška funkcija: $s: a \longrightarrow a \cup \{a\}$
 
     Peanovi Aksiomi:
     \begin{itemize}
@@ -30,6 +30,22 @@ V zadnji aksiom vstavimo $\mathbb{N}_1$ in $\mathbb{N}_2$ in dobimo $\mathbb{N}_
     Množica naravnih števil je množica, ki zadošča Peanovim Aksiomom.
     Označimo jo z $\mathbb{N}$.
 \end{definicija}
+
+\begin{trditev}
+    Naj bo $T(n)$ trditev za naravno število $n$.
+    Potem sta naslednji trditvi ekvivalentni:
+    \begin{itemize}
+        \item $T(0)$ in $\forall n \in \mathbb{N}. T(n) \implies T(s(n))$
+        \item $\forall n \in \mathbb{N}. T(n)$
+    \end{itemize}
+\end{trditev}
+\begin{dokaz}
+    $\implies$: \\
+    Naj bo $A = \{n \in \mathbb{N} | T(n)\}$.
+    Po tretjem aksiomu velja $A = \mathbb{N}$ in zato $\forall n \in \mathbb{N}. T(n)$.
+    $\impliedby$: \\
+    Očitno.
+\end{dokaz}
 
 \begin{trditev}
     $\forall x \in \mathbb{N}. x = 0 \vee \exists y \in \mathbb{N}. s(y) = x$
@@ -66,4 +82,56 @@ V zadnji aksiom vstavimo $\mathbb{N}_1$ in $\mathbb{N}_2$ in dobimo $\mathbb{N}_
     $s(a) = 0 \implies \{a, \{a\}\} = \emptyset$ ampak $a \in \{a, \{a\}\} \wedge a \notin \emptyset$
 \end{dokaz}
 
+\begin{trditev}
+    Naj bo $A \subseteq \mathbb{N}$ in $a \neq \emptyset$.
+    Potem je $(\exists n \in \mathbb{N}. n \notin A \wedge s(n) \in A) \vee 0 \in A$.
+\end{trditev}
+\begin{dokaz}
+    Predpostavimo, da za množico ne velja $(\exists n \in \mathbb{N}. n \notin A \wedge s(n) \in A) \vee 0 \in A$. \\
+    Potem dobimo: $(n \notin A \implies s(a) \notin A) \wedge 0 \notin A$.
+    Z indukcijo dokažemo, da nobeno naravno število ni v $A$.
+    Za $0$ je očitno, za $s(n)$ pa sledi iz predpostavke.
+    Iz tega sledi, da če množica ne zadostuje pogoju, je prazna.
+\end{dokaz}
 
+\begin{trditev}
+    (Univerzalna lastnost naravnih števil) \\
+    Naj bo $A$ neprazna množica, $f: A \to A$ preslikava in $a \in A$ nek fiksen element.
+    Potem obstaja natanko ena preslikava $\sigma: \mathbb{N} \to A$, da bo $\sigma \circ s = f \circ \sigma$ in $\sigma(0) = a$.
+\end{trditev}
+\begin{dokaz}
+    Treba bo skonstruirati $\sigma \subseteq \mathbb{N} \times A$, da bo veljalo:
+    \begin{itemize}
+        \item $\sigma$ je preslikava
+        \item $(0, a) \in \sigma$
+        \item $(n, m) \in \sigma \implies (s(n), f(m)) \in \sigma$
+    \end{itemize}
+    Naj bo $S \subseteq \mathcal{P}(\mathbb{N} \times A)$, ki vsebuje vse podmnožice, ki zadoščajo drugi in tretji točki.
+    $S$ je neprazna, saj vsebuje vsaj $\mathbb{N} \times A$.
+    Vzemimo $\sigma = \bigcap S$.
+    Dokažimo, da je $\sigma$ preslikava: \\
+    Najprej $\forall n \in \mathbb{N}. \exists b \in A. (n, b) \in \sigma$: \\
+    Naj bo $T \subseteq \mathbb{N}$, kjer $\forall t \in T. \nexists b \in A. (t, b) \in \sigma$.
+    Predpostavimo, da $T$ ni prazna, potem obstaja $t$, kjer $t = 0$ ali pa $l \notin T \wedge s(l) = t$. \\
+    1. $t = 0$ pomeni, da je $(0, b) \notin \sigma$ za vse $b \in A$ kar je protislovje. \\
+    2. $s(l) = t$ pomeni, da je $(s(l), f(m)) \notin \sigma$ za vse $m \in A$, kar je protislovje, saj obstaja $b \in A$, da je $(l, b) \in \sigma$. \\
+    Dokažimo še enoličnost za vsak element v $A$ z indukcijo na $n$. \\
+    1. $n = 0$.
+    Denimo, da obstaja $b \in A$, da bo $(0, b) \in \sigma$ in $b \neq a$.
+    Ampak potem $\sigma \setminus {(0, b)}$ zadošča drugi in tretji točki, kar je protislovje, saj je $\sigma$ presek vseh takih množic. \\
+    2. $n = s(l)$ in za $l$ velja, da je enoličen.
+    Mora veljati: $(l, m) \in \sigma \implies (n, f(m)) \in \sigma$.
+    Če rečemo, da je $m$ tisti enoličen element (po predpostavki), ki zadošča $(l, m) \in \sigma$, potem dobimo $(n, f(m)) \in \sigma$.
+    Denimo, da obstaja še en $m'$, ki zadošča $(l, m') \in \sigma$ in $m' \neq m$.
+    Potem $\sigma \setminus \{(l, m')\}$ zadošča drugi in tretji točki, kar je protislovje. \\
+    Zdaj vemo, da je $\sigma$ preslikava. \\
+    Dokažimo še, da je $\sigma$ enolična.
+    Naj bo $\tau$ še ena preslikava, ki zadošča pogojem.
+    Potem velja: $\forall n \in \mathbb{N}. \sigma(n) = \tau(n)$.
+    Dokažimo z indukcijo na $n$. \\
+    1. $n = 0$.
+    $\sigma(0) = a = \tau(0)$. \\
+    2. $n \to s(n)$.
+    $\sigma(s(n)) = f(\sigma(n)) = f(\tau(n)) = \tau(s(n))$. \\
+    Torej je $\sigma = \tau$.
+\end{dokaz}
