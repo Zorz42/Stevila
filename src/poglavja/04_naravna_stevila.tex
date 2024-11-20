@@ -135,3 +135,122 @@ V zadnji aksiom vstavimo $\mathbb{N}_1$ in $\mathbb{N}_2$ in dobimo $\mathbb{N}_
     $\sigma(s(n)) = f(\sigma(n)) = f(\tau(n)) = \tau(s(n))$. \\
     Torej je $\sigma = \tau$.
 \end{dokaz}
+
+\begin{definicija}
+    Seštevanje na naravnih številih je preslikava $+: \mathbb{N} \times \mathbb{N} \to \mathbb{N}$, ki zadošča naslednjim aksiomom:
+    \begin{itemize}
+        \item $n + 0 = n$
+        \item $n + s(m) = s(n + m)$
+    \end{itemize}
+\end{definicija}
+
+\begin{trditev}
+    Seštevanje na naravnih številih je dobro definirano.
+\end{trditev}
+\begin{dokaz}
+    Fiksiramo $n$ in dokažemo, da je $m \to n + m$ enolično.
+    V univerzalno lastnost naravnih števil vstavimo: $A = \mathbb{N}$, $f = s$, $a = n$.
+    Potem obstaja natanko ena preslikava $\sigma: \mathbb{N} \to \mathbb{N}$, da bo $\sigma \circ s = s \circ \sigma$ in $\sigma(0) = n$,
+    kar je ravno preslikava, ki jo iščemo.
+\end{dokaz}
+
+\begin{trditev}
+    $(\mathbb{N}, +)$ tvori komutativni monoid.
+\end{trditev}
+\begin{dokaz}
+    \begin{itemize}
+
+    \item Asociativnost: $a + (b + c) = (a + b) + c$ \\
+    Indukcija na $c$: \\
+    1. $c = 0$: $a + (b + 0) = a + b = (a + b) + 0$ \\
+    2. $c \to s(c)$: $a + (b + s(c)) = a + s(b + c) = s(a + (b + c)) = s((a + b) + c) = s(a + (b + c)) = (a + b) + s(c)$ \\
+
+    \item Enota: $a + 0 = 0 + a = a$ \\
+    $a + 0 = a$ sledi iz definicije. $0 + a = a$ bomo dokazali z indukcijo. \\
+    1. $a = 0$ je očitno $0 + 0 = 0$ \\
+    2. $a \to s(a)$. $0 + s(a) = s(0 + a) = s(a)$ \\
+
+    \item Vmesna trditev: $s(a) + b = a + s(b)$ \\
+    Indukcija na $b$: \\
+    1. $b = 0$: $s(a) + 0 = s(a + 0) = a + s(0)$ \\
+    2. $b \to s(b)$: $s(a) + s(b) = s(s(a) + b) = s(a + s(b)) = a + s(s(b))$ \\
+
+    \item Komutativnost: $a + b = b + a$ indukcija na $a$. \\
+    1. $a = 0$: smo že dokazali $0 + b = b + 0$. \\
+    2. $a \to s(a)$: $s(a) + b = a + s(b) = s(a + b) = s(b + a) = b + s(a)$.
+    \end{itemize}
+\end{dokaz}
+
+\begin{definicija}
+    $1 = s(0)$ in sledi, da $s(a) = a + 1$
+\end{definicija}
+
+\begin{definicija}
+    Množenje na naravnih številih definiramo kot:
+    \begin{itemize}
+        \item $a0 = 0$
+        \item $a(b + 1) = ab + a$
+    \end{itemize}
+\end{definicija}
+
+\begin{trditev}
+    Množenje na naravnih številih je dobro definirano.
+\end{trditev}
+\begin{dokaz}
+    Fiksiramo $a$ in dokažemo, da je operacija enolična.
+    V univerzalno lastnost naravnih števil vstavimo: $A = \mathbb{N}$, $f(n) = n + a$, $a = 0$.
+    Potem obstaja natanko ena preslikava $\sigma: \mathbb{N} \to \mathbb{N}$, da bo $\sigma \circ s = s \circ \sigma$ in $\sigma(0) = 0$,
+    kar je ravno preslikava, ki jo iščemo.
+\end{dokaz}
+
+\begin{trditev}
+    $0a = 0$
+\end{trditev}
+\begin{dokaz}
+    Dokaz z indukcijo: \\
+    1. $a = 0$: $0\cdot 0 = 0$. \\
+    2. $a \to a + 1$: $0(a+1) = 0a + 0 = 0$.
+\end{dokaz}
+
+\begin{trditev}
+    $(a + 1)b = ab + b$
+\end{trditev}
+\begin{dokaz}
+    Dokaz z indukcijo: \\
+    1. $b = 0$: $(a + 1)0 = 0 = a0 + 0$. \\
+    2. $b \to b + 1$: $(a + 1)(b + 1) = (a + 1)b + a + 1 = ab + b + a + 1 = ab + a + b + 1 = a(b + 1) + b + 1$
+\end{dokaz}
+
+\begin{trditev}
+    $a(b + c) = ab + ac$
+\end{trditev}
+\begin{dokaz}
+    Dokaz in indukcijo na $a$: \\
+    1. $a = 0$. $0(b + c) = 0 = 0b + 0c$. \\
+    2. $a \to a + 1$. $(a + 1)(b + c) = a(b + c) + b + c = ab + b + ac + c = (a + 1)b + (a + 1)c$
+\end{dokaz}
+
+\begin{trditev}
+    $(\mathbb{N}, \cdot)$ tvori komutativni monoid.
+\end{trditev}
+\begin{dokaz}
+    \begin{itemize}
+
+    \item Asociativnost: $a(bc) = (ab)c$ \\
+    Indukcija na $c$: \\
+    1. $c = 0$: $a(b0) = a0 = 0 = (ab)0$ \\
+    2. $c \to c + 1$: $a(b(c + 1)) = a(bc + b) = abc + ab = ab(c + 1)$ \\
+
+    \item Enota: $a1 = 1a = a$ \\
+    $a1 = a$ bomo dokazali z indukcijo. \\
+    1. $a = 0$ je iz trditve $0\cdot a = 0$ \\
+    2. $a \to a + 1$. $(a + 1)1 = a1 + 1 = a + 1$ \\
+    $1a = a$ bomo dokazali z indukcijo. \\
+    1. $a = 0$ je iz definicije $a\cdot 0 = 0$ \\
+    2. $a \to a + 1$. $1(a + 1) = 1a + 1 = a + 1$ \\
+
+    \item Komutativnost: $ab = ba$ indukcija na $a$. \\
+    1. $a = 0$: smo že dokazali $0b = 0 = b0$. \\
+    2. $a \to a + 1$: $(a + 1)b = ab + b = ba + b = b(a + 1)$.
+    \end{itemize}
+\end{dokaz}
