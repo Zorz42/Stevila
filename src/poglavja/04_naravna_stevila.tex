@@ -274,7 +274,8 @@ V zadnji aksiom vstavimo $\mathbb{N}_1$ in $\mathbb{N}_2$ in dobimo $\mathbb{N}_
 
 \begin{definicija}
     Definiramo relacijo $\leq \subset \mathbb{N} \times \mathbb{N}$ na naravnih številih: \\
-    $a \leq b \iff \exists c \in \mathbb{N}. a + c = b$
+    $a \leq b \iff \exists c \in \mathbb{N}. a + c = b$ \\
+    $a < b \iff a \neq b \wedge a \leq b$
 \end{definicija}
 
 \begin{trditev}
@@ -289,7 +290,12 @@ V zadnji aksiom vstavimo $\mathbb{N}_1$ in $\mathbb{N}_2$ in dobimo $\mathbb{N}_
         \item $a \leq b \wedge b \leq a \implies a = b$ \\
         $a + c = b$ in $b + c' = a$, torej $b + (c + c') = b \implies c + c' = 0 \implies c = c' = 0 \implies a = b$
         \item $a \leq b \vee b \leq a$ \\
-
+        Dokažemo z indukcijo na $a$. \\
+        1. $a = 0$: potem vedno velja $0 \leq a$. \\
+        2. $a \to a + 1$: Ločimo tri primere: \\
+        2.1. $a < b \implies a + c = b \wedge c \neq 1 \implies a + c' + 1 = b \implies b \leq a + 1$ \\
+        2.2. $a = b \implies a + 1 = b + 1 \implies b \leq a + 1$ \\
+        2.3. $a > b \implies a = b + c \implies a + 1 = b + 1 + c \implies b \leq a + 1$
     \end{itemize}
 \end{dokaz}
 
