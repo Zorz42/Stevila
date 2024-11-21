@@ -99,3 +99,18 @@
         (a^{-1})^{-1} = a
     \end{align*}
 \end{dokaz}
+
+\begin{definicija}
+    Naj bo $A$ množica in $\leq \subseteq A \times A$ relacija.
+    Potem je $(A, \leq)$ delno urejena množica, če velja:
+    \begin{itemize}
+        \item $a \leq a$ (refleksivnost)
+        \item $a \leq b \wedge b \leq a \implies a = b$ (antisimetričnost)
+        \item $a \leq b \wedge b \leq c \implies a \leq c$ (tranzitivnost)
+    \end{itemize}
+    Če še dodatno velja:
+    \begin{itemize}
+        \item $a \leq b \vee b \leq a$ (sovisnost)
+    \end{itemize}
+    je $(A, \leq)$ linearno urejena množica.
+\end{definicija}

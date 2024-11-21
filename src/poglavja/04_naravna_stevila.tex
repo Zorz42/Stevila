@@ -254,3 +254,43 @@ V zadnji aksiom vstavimo $\mathbb{N}_1$ in $\mathbb{N}_2$ in dobimo $\mathbb{N}_
     2. $a \to a + 1$: $(a + 1)b = ab + b = ba + b = b(a + 1)$.
     \end{itemize}
 \end{dokaz}
+
+\begin{trditev}
+    Pravilo krajšanja: $a + b = a + c \implies b = c$
+\end{trditev}
+\begin{dokaz}
+    Indukcija na $a$: \\
+    1. $a = 0$: trivialno velja. \\
+    2. $a \to a + 1$: $(a + 1) + b = (a + 1) + c \implies s(a + b) = s(a + c) \implies a + b = a + c \implies b = c$
+\end{dokaz}
+
+\begin{trditev}
+    $a + b = 0 \implies a = b = 0$
+\end{trditev}
+\begin{dokaz}
+    BŠS predpostavimo, da $a \neq 0$ in potem $s(a') = a$, torej $a = a' + 1$. \\
+    Dobimo: $a' + 1 + b = s(a' + b) = 0$, kar je pa protislovje.
+\end{dokaz}
+
+\begin{definicija}
+    Definiramo relacijo $\leq \subset \mathbb{N} \times \mathbb{N}$ na naravnih številih: \\
+    $a \leq b \iff \exists c \in \mathbb{N}. a + c = b$
+\end{definicija}
+
+\begin{trditev}
+    $(\mathbb{N}, \leq)$ je linearno urejena množica.
+\end{trditev}
+\begin{dokaz}
+    \begin{itemize}
+        \item $a \leq a$ \\
+        Očitno če v definicijo vstavimo $c = 0$.
+        \item $a \leq b \wedge b \leq c \implies a \leq c$ \\
+        $a + d = b$ in $b + d' = c$, zato $a + (d + d') = c$
+        \item $a \leq b \wedge b \leq a \implies a = b$ \\
+        $a + c = b$ in $b + c' = a$, torej $b + (c + c') = b \implies c + c' = 0 \implies c = c' = 0 \implies a = b$
+        \item $a \leq b \vee b \leq a$ \\
+
+    \end{itemize}
+\end{dokaz}
+
+

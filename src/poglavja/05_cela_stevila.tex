@@ -1,0 +1,73 @@
+\begin{definicija}
+    Definiramo relacijo $\sim$ na množici $\mathbb{N} \times \mathbb{N}$. \\
+    Definiramo: $(a, b) \sim (c, d) \iff a + d = b + c$
+\end{definicija}
+
+\begin{trditev}
+    $\sim$ je ekvivalenčna relacija.
+\end{trditev}
+\begin{dokaz}
+    \begin{itemize}
+        \item $a \sim a$ \\
+        $(a, b) \sim (a, b) \iff a + b = b + a$
+        \item $a \sim b \iff b \sim a$ \\
+        $(a, b) \sim (c, d) \iff a + d = b + c \iff c + b = a + d \iff (c, d) \sim (a, b)$
+        \item $a \sim b \wedge b \sim c \implies a \sim c$ \\
+        $(a_1, a_2) \sim (b_1, b_2) \wedge (b_1, b_2) \sim (c_1, c_2) \implies$ \\
+        $a_1 + b_2 = b_1 + a_2 \wedge b_1 + c_2 = b_2 + c_1 \implies$ \\
+        $a_1 + b_2 + b_1 + c_2 = b_1 + a_2 + b_2 + c_1 \implies$ \\
+        $a_1 + c_2 = a_2 + c_1 \implies (a_1, a_2) \sim (c_1, c_2)$
+    \end{itemize}
+\end{dokaz}
+
+\begin{definicija}
+    Z $\mathbb{Z}$ označimo vse ekvivalenčne razrede $\mathbb{N} \times \mathbb{N}$ pod relacijo $\sim$.
+\end{definicija}
+
+\begin{trditev}
+    Za vsak $(a, b)$ obstaja nek $c$, da velja $(0, c) \sim (a, b)$ ali pa $(c, 0) \sim (a, b)$.
+\end{trditev}
+\begin{dokaz}
+    Dokaz z indukcijo na $a$.
+    1. $a = 0$ dobimo $(0, b) \sim (0, c)$ za $b = c$ \\
+    2. $a \to a + 1$.
+    Obravnavamo po primerih: \\
+    2.1. $(a, b) \sim (0, c)$ in $c \neq 0$ \\
+    $a + c = b \implies a + c' + 1 = b \implies (a + 1, b) \sim (0, c')$ \\
+    2.2. $(a, b) \sim (0, 0)$ \\
+    $a = b \implies a + 1 = b + 1 \implies (a + 1, b) \sim (1, 0)$ \\
+    2.3. $(a, b) \sim (c, 0)$ in $c \neq 0$ \\
+    $a = b + c \implies a + 1 = b + c + 1 \implies (a + 1, b) \sim (c + 1, 0)$
+\end{dokaz}
+
+\begin{definicija}
+    Iz prejšnje trditve vemo, da vsak razred iz $\mathbb{Z}$ vsebuje element oblike $(c, 0)$ ali pa $(0, c)$, zato definiramo: \\
+    $a = (a, 0)$ in $-a = (0, a)$ in tako označimo elemente celih števil.
+    Nekatera števila imajo isto oznako kot naravna števila.
+    To je zato, ker se enako obnašajo.
+    Namesto $\sim$ tudi pišemo $=$, kadar uporabljamo to notacijo.
+\end{definicija}
+
+\begin{trditev}
+    Vsa števila, ki so ekvivalentna $(0, c)$ so oblike $(d, c + d)$ in podobno za $(c, 0)$
+\end{trditev}
+\begin{dokaz}
+    $(a, b) \sim (0, c) \implies a + c = b \implies (a, b) = (a, c + a)$ \\
+    Podoben dokaz za $(c, 0)$.
+\end{dokaz}
+
+\begin{definicija}
+    Definiramo seštevanje na celih številih po komponentah.
+    $(a, b) + (c, d) \sim (a + c, b + d)$
+\end{definicija}
+
+\begin{trditev}
+    Seštevanje na celih številih je dobro definirano.
+\end{trditev}
+\begin{dokaz}
+    Dokazat je treba, da se vsi elementi dveh ekvivalenčnih razredov seštejejo v elemente istega ekvivalenčnega razreda. \\
+    1. $(a, c + a) + (b, c' + b) \equiv (a + b, c + c' + a + b)$ je pa očitno v istem razredu. \\
+    2. $(a, c + a) + (c' + b, b) \equiv (c + a + b, c' + a + b)$ je pa očitno v istem razredu. \\
+    Podoben razmislek za 3 in 4
+\end{dokaz}
+
