@@ -42,7 +42,7 @@
 
 \begin{definicija}
     Iz prejšnje trditve vemo, da vsak razred iz $\mathbb{Z}$ vsebuje element oblike $(c, 0)$ ali pa $(0, c)$, zato definiramo: \\
-    $a = (a, 0)$ in $-a = (0, a)$ in tako označimo elemente celih števil.
+    $a = (a, 0)$ in $-(a, b) = (b, a)$ in tako označimo elemente celih števil.
     Nekatera števila imajo isto oznako kot naravna števila.
     To je zato, ker se enako obnašajo.
     Namesto $\sim$ tudi pišemo $=$, kadar uporabljamo to notacijo.
@@ -71,3 +71,63 @@
     Podoben razmislek za 3 in 4
 \end{dokaz}
 
+\begin{trditev}
+    Invertiranje je dobro definirano.
+\end{trditev}
+\begin{dokaz}
+    Treba je dokazat: $(a, b) \sim (c, d) \iff -(a, b) \sim -(c, d)$: \\
+    $(a, b) \sim (c, d) \iff a + d = b + c \iff b + c = a + d \iff (b, a) \sim (d, c) \iff -(a, b) \sim -(c, d)$
+\end{dokaz}
+
+\begin{definicija}
+    Odštevanje definiramo kot: $a - b = a + (-b)$
+\end{definicija}
+
+\begin{trditev}
+    $a - a = 0$
+\end{trditev}
+\begin{dokaz}
+    $a - a = (a, 0) + (0, a) \sim (a, a) \sim (0, 0) = 0$
+\end{dokaz}
+
+\begin{trditev}
+    $(\mathbb{Z}, +)$ tvori abelovo grupo.
+\end{trditev}
+\begin{dokaz}
+    Da tvori komutativen monoid, je trivialno res, saj se ta lastnost podeduje od naravnih števil, saj seštevamo po komponentah. \\
+    Obstoj inverza pa dokazuje prejšnja trditev.
+\end{dokaz}
+
+\begin{definicija}
+    Množenje definiramo na celih številih na naslednji način: \\
+    $(a, b) \cdot (c, d) \sim (ac + bd, ad + bc)$ \\
+\end{definicija}
+
+\begin{trditev}
+    $a(b + c) = ab + ac$
+\end{trditev}
+\begin{dokaz}
+    $a(b + c) = (a_1, a_2)\cdot(b_1 + c_1, b_2 + c_2) = (a_1(b_1 + c_1) + a_2(b_2 + c_2), a_2(b_1 + c_1) + a_1(b_2 + c_2)) =$
+    $(a_1 b_1 + a_1 c_1 + a_2 b_2 + a_2 c_2, a_2 b_1 + a_2 c_1 + a_2 b_2 + a_2 c_2) = $
+    $(a_1 b_1 + a_2 b_2, a_1 b_2 + a_2 b_1) + (a_1 c_1 + a_2 c_2, a_1 c_2 + a_2 c_1) =$
+    $(a_1, a_2)\cdot(b_1, b_2) + (a_1, a_2)\cdot(c_1, c_2) =$
+    $ab + ac$
+\end{dokaz}
+
+\begin{trditev}
+    $(\mathbb{Z}, \cdot)$ tvori komutativni monoid.
+\end{trditev}
+\begin{dokaz}
+    \begin{itemize}
+        \item $(ab)c = a(bc)$\\
+        $((a_1,a_2)(b_1,b_2))(c_1,c_2) = (a_1 b_1 + a_2 b_2, a_1 b_2 + a_2 b_1)(c_1, c_2) = $
+        $((a_1 b_1 + a_2 b_2)c_1 + (a_1 b_2 + a_2 b_1)c_2, (a_1 b_1 + a_2 b_2)c_2 + (a_1 b_2 + a_2 b_1)c_1) = $
+        $(a_1 b_1 c_1 + a_2 b_2 c_1 + a_1 b_2 c_2 + a_2 b_1 c_2, a_1 b_1 c_2 + a_2 b_2 c_2 + a_1 b_2 c_1 + a_2 b_1 c_1)$ \\
+        Po drugi strani pa:\\
+        $(a_1,a_2)((b_1,b_2)(c_1,c_2)) = (a_1,a_2)(b_1 c_1 + b_2 c_2, b_1 c_2 + b_2 c_1) =$
+        $(a_1(b_1 c_1 + b_2 c_2) + a_2(b_1 c_2 + b_2 c_1), a_1(b_1 c_2 + b_2 c_1) + a_2(b_1 c_1 + b_2 c_2)) =$
+        $(a_1 b_1 c_1 + a_1 b_2 c_2 + a_2 b_1 c_2 + a_2 b_2 c_1, a_1 b_1 c_2 + a_1 b_2 c_1 + a_2 b_1 c_1 + a_2 b_2 c_2)$
+        \item $a1 = 1a = a$\\
+        \item $ab = ba$\\
+    \end{itemize}
+\end{dokaz}
