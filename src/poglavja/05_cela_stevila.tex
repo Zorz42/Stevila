@@ -120,12 +120,12 @@
 \begin{dokaz}
     \begin{itemize}
         \item $(ab)c = a(bc)$\\
-        $((a_1,a_2)(b_1,b_2))(c_1,c_2) = (a_1 b_1 + a_2 b_2, a_1 b_2 + a_2 b_1)(c_1, c_2) = $
-        $((a_1 b_1 + a_2 b_2)c_1 + (a_1 b_2 + a_2 b_1)c_2, (a_1 b_1 + a_2 b_2)c_2 + (a_1 b_2 + a_2 b_1)c_1) = $
+        $((a_1,a_2)(b_1,b_2))(c_1,c_2) = (a_1 b_1 + a_2 b_2, a_1 b_2 + a_2 b_1)(c_1, c_2) = $\\
+        $((a_1 b_1 + a_2 b_2)c_1 + (a_1 b_2 + a_2 b_1)c_2, (a_1 b_1 + a_2 b_2)c_2 + (a_1 b_2 + a_2 b_1)c_1) = $\\
         $(a_1 b_1 c_1 + a_2 b_2 c_1 + a_1 b_2 c_2 + a_2 b_1 c_2, a_1 b_1 c_2 + a_2 b_2 c_2 + a_1 b_2 c_1 + a_2 b_1 c_1)$ \\
         Po drugi strani pa:\\
-        $(a_1,a_2)((b_1,b_2)(c_1,c_2)) = (a_1,a_2)(b_1 c_1 + b_2 c_2, b_1 c_2 + b_2 c_1) =$
-        $(a_1(b_1 c_1 + b_2 c_2) + a_2(b_1 c_2 + b_2 c_1), a_1(b_1 c_2 + b_2 c_1) + a_2(b_1 c_1 + b_2 c_2)) =$
+        $(a_1,a_2)((b_1,b_2)(c_1,c_2)) = (a_1,a_2)(b_1 c_1 + b_2 c_2, b_1 c_2 + b_2 c_1) =$\\
+        $(a_1(b_1 c_1 + b_2 c_2) + a_2(b_1 c_2 + b_2 c_1), a_1(b_1 c_2 + b_2 c_1) + a_2(b_1 c_1 + b_2 c_2)) =$\\
         $(a_1 b_1 c_1 + a_1 b_2 c_2 + a_2 b_1 c_2 + a_2 b_2 c_1, a_1 b_1 c_2 + a_1 b_2 c_1 + a_2 b_1 c_1 + a_2 b_2 c_2)$
         \item $ab = ba$\\
         $(a_1, a_2)(b_1, b_2) = (a_1 b_1 + a_2 b_2, a_1 b_2 + a_2 b_1) = (b_1 a_1 + b_2 a_2, b_1 a_2 + b_2 a_1) = (b_1, b_2)(a_1, a_2)$
@@ -135,5 +135,28 @@
 \end{dokaz}
 
 \begin{definicija}
-    $(a_1, a_2) \leq (b_1, b_2)$
+    $(a_1, a_2) \leq (b_1, b_2) \iff a_1 + b_2 \leq a_2 + b_1$ \\
+    $(a_1, a_2) < (b_1, b_2) \iff a_1 + b_2 < a_2 + b_1$
 \end{definicija}
+
+\begin{trditev}
+    $(Z, \leq)$ je linearno urejena.
+\end{trditev}
+\begin{dokaz}
+    \begin{itemize}
+        \item $a \leq a$ \\
+        $(a_1, a_2) \leq (a_1, a_2) \iff a_1 + a_2 \leq a_2 + a_1$
+        \item $a \leq b \wedge b \leq c \implies a \leq c$ \\
+        $(a_1, a_2) \leq (b_1, b_2) \wedge (b_1, b_2) \leq (c_1, c_2) \implies$\\
+        $a_1 + b_2 \leq a_2 + b_1 \wedge b_1 + c_2 \leq b_2 + c_1 \implies$\\
+        $(a_1, a_2) \leq (c_1, c_2)$
+        \item $a \leq b \wedge b \leq a \implies a = b$ \\
+        $(a_1, a_2) \leq (b_1, b_2) \wedge (b_1, b_2) \leq (a_1, a_2) \implies$ \\
+        $a_1 + b_2 \leq a_2 + b_1 \wedge b_1 + a_2 \leq b_2 + a_1 \implies$ \\
+        $a_1 + b_2 = b_1 + a_2 \implies (a_1, a_2) = (b_1, b_2)$
+        \item $a \leq b \vee b \leq a$ \\
+        $(a_1, a_2) \leq (b_1, b_2) \vee (b_1, b_2) \leq (a_1, a_2) \iff$
+        $a_1 + b_2 \leq b_1 + a_2 \vee a_2 + b_1 \leq b_2 + a_1$ \\
+        kar pa velja iz naravnih števil.
+    \end{itemize}
+\end{dokaz}
