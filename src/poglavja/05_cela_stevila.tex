@@ -127,7 +127,13 @@
         $(a_1,a_2)((b_1,b_2)(c_1,c_2)) = (a_1,a_2)(b_1 c_1 + b_2 c_2, b_1 c_2 + b_2 c_1) =$
         $(a_1(b_1 c_1 + b_2 c_2) + a_2(b_1 c_2 + b_2 c_1), a_1(b_1 c_2 + b_2 c_1) + a_2(b_1 c_1 + b_2 c_2)) =$
         $(a_1 b_1 c_1 + a_1 b_2 c_2 + a_2 b_1 c_2 + a_2 b_2 c_1, a_1 b_1 c_2 + a_1 b_2 c_1 + a_2 b_1 c_1 + a_2 b_2 c_2)$
-        \item $a1 = 1a = a$\\
         \item $ab = ba$\\
+        $(a_1, a_2)(b_1, b_2) = (a_1 b_1 + a_2 b_2, a_1 b_2 + a_2 b_1) = (b_1 a_1 + b_2 a_2, b_1 a_2 + b_2 a_1) = (b_1, b_2)(a_1, a_2)$
+        \item $1a = a$\\
+        $(a_1, a_2)(1, 0) = (1 a_1 + 0 a_2, 0 a_1 + 1 a_2) = (a_1, a_2)$
     \end{itemize}
 \end{dokaz}
+
+\begin{definicija}
+    $(a_1, a_2) \leq (b_1, b_2)$
+\end{definicija}
