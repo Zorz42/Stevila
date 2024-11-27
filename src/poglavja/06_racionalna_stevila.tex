@@ -1,0 +1,82 @@
+\begin{definicija}
+    Ulomek $(a, b)$, kjer $a,b \in \mathbb{Z}$ in $b \neq 0$, zapišemo kot $\frac{a}{b}$.
+    Enakost ulomkov: $\frac{a}{b} = \frac{c}{d} \iff ad = cb$.
+\end{definicija}
+
+\begin{trditev}
+    Enakost med ulomki je ekvivalenčna relacija.
+\end{trditev}
+\begin{dokaz}
+    \begin{itemize}
+        \item $a = a$: \\
+        $\frac{a}{b} = \frac{a}{b} \iff ab = ba$
+        \item $a = b \implies b = a$: \\
+        $\frac{a}{b} = \frac{c}{d} \iff ad = cb \iff da = bc \iff \frac{c}{d} = \frac{a}{b}$
+        \item $a = b \wedge b = c \implies a = c$: \\
+        $\frac{a_1}{a_2} = \frac{b_1}{b_2} \wedge \frac{b_1}{b_2} = \frac{c_1}{c_2} \implies$ \\
+        $a_1 b_2 = a_2 b_1 \wedge b_1 c_2 = b_2 c_1 \implies$ \\
+        $a_1 b_2 b_1 c_2 = a_2 b_1 b_2 c_1 \implies $\\
+        $a_1 c_2 = a_2 c_1 \implies $\\
+        $\frac{a_1}{a_2} = \frac{c_1}{c_2}$
+    \end{itemize}
+\end{dokaz}
+
+\begin{definicija}
+    Množico racionalnih števil definiramo kot: \\
+    $\mathbb{Q} = \{\left[\frac{x}{y}\right] | x, y \in \mathbb{Z} \wedge y \neq 0\}$
+\end{definicija}
+
+\begin{definicija}
+    Definiramo seštevanje kot: \\
+    $\frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}$
+\end{definicija}
+
+\begin{trditev}
+    $\frac{a}{b} = \frac{ac}{bc}$
+\end{trditev}
+\begin{dokaz}
+    $\frac{a}{b} = \frac{ac}{bc} \iff abc = bac$
+\end{dokaz}
+
+\begin{trditev}
+    Seštevanje je dobro definirano.
+\end{trditev}
+\begin{dokaz}
+    Naj bosta $\frac{a_1}{a_2} = \frac{b_1}{b_2}$ torej $a_1 b_2 = a_2 b_1$.
+    Potrdimo, da je $\frac{a_1}{a_2} + \frac{c_1}{c_2} = \frac{b_1}{b_2} + \frac{c_1}{c_2}$.
+    $\frac{a_1}{a_2} + \frac{c_1}{c_2} = \frac{a_1 c_2 + a_2 c_1}{a_2 c_2} = \frac{a_1 c_2 b_1 + a_2 c_1 b_1}{a_2 c_2 b_1} =$
+    $\frac{a_1 c_2 b_1 + a_1 c_1 b_2}{a_1 c_2 b_2} = \frac{c_2 b_1 + c_1 b_2}{c_2 b_2} = \frac{b_1}{b_2} + \frac{c_1}{c_2}$
+    Podoben razmislek je tudi za drugo stran.
+\end{dokaz}
+
+\begin{trditev}
+    $(\mathbb{Q}, +)$ tvori Abelovo grupo.
+\end{trditev}
+\begin{dokaz}
+    \begin{itemize}
+        \item $(a + b) + c = a + (b + c)$ \\
+        $\left(\frac{a_1}{a_2} + \frac{b_1}{b_2}\right) + \frac{c_1}{c_2} = \frac{a_1 b_2 + a_2 b_1}{a_2 b_2} + \frac{c_1}{c_2} = $
+        $\frac{a_1 b_2 c_2 + a_2 b_1 c_2 + a_2 b_2 c_1}{a_2 b_2 c_2} = \frac{a_1}{a_2} + \frac{b_1 c_2 + b_2 c_1}{b_2 c_2} =$
+        $\frac{a_1}{a_2} + \left(\frac{b_1}{b_2} + \frac{c_1}{c_2}\right)$
+        \item $a + 0 = 0 + a = a$ \\
+        $\frac{a}{b} + \frac{0}{1} = \frac{a}{b} = \frac{0}{1} + \frac{a}{b}$
+        \item $a - a = 0$ \\
+        $\frac{a}{b} + \frac{-a}{b} = \frac{ab - ba}{b^2} = \frac{0}{1}$
+        \item $a + b = b + a$ \\
+        $\frac{a_1}{a_2} + \frac{b_1}{b_2} = \frac{a_1 b_2 + a_2 b_1}{a_2 b_2} = \frac{b_1}{b_2} + \frac{a_1}{a_2}$
+    \end{itemize}
+\end{dokaz}
+
+\begin{definicija}
+    Množenje definiramo kot: \\
+    $\frac{a}{b}\frac{c}{d} = \frac{ac}{bd}$
+\end{definicija}
+
+\begin{trditev}
+    Množenje je dobro definirano.
+\end{trditev}
+\begin{dokaz}
+    Naj bo $\frac{a_1}{a_2} = \frac{b_1}{b_2}$, torej $a_1 b_2 = a_2 b_1$.
+    Potem $\frac{a_1}{a_2} \frac{c_1}{c_2} = \frac{a_1 c_2}{a_2 c_2} = \frac{a_1 c_2 b_1}{a_2 c_2 b_1} = $
+    $\frac{a_1 c_2 b_1}{a_1 c_2 b_2} = \frac{c_1 b_1}{b_2 c_2} = \frac{b_1}{b_2} \frac{c_1}{c_2}$
+\end{dokaz}

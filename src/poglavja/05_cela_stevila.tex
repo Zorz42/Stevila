@@ -134,10 +134,38 @@
     \end{itemize}
 \end{dokaz}
 
+\begin{trditev}
+    $ab = 0 \implies a = 0 \vee b = 0$
+\end{trditev}
+\begin{dokaz}
+    Predpostavimo $a \neq 0$ in $b \neq 0$ in dokažimo $ab \neq 0$.
+    Naj bo $a = (a, 0)$ in $b = (b, 0)$.
+    $(a, 0)(b, 0) = (ab, 0) \neq 0 \implies ab \neq 0$ kar je pa protislovje. \\
+    Naj bo $a = (a, 0)$ in $b = (0, b)$.
+    $(a, 0)(0, b) = (0, ab) \neq 0 \implies ab \neq 0$ kar je pa spet protislovje. \\
+    Preostala dva primera sta zelo podobna.
+\end{dokaz}
+
+\begin{trditev}
+    $ac = bc \wedge c \neq 0 \implies a = b$
+\end{trditev}
+\begin{dokaz}
+    $ac = bc \implies ac - bc = 0 \implies (a - b)c = 0 \implies a - b = 0 \implies a = b$
+\end{dokaz}
+
 \begin{definicija}
     $(a_1, a_2) \leq (b_1, b_2) \iff a_1 + b_2 \leq a_2 + b_1$ \\
     $(a_1, a_2) < (b_1, b_2) \iff a_1 + b_2 < a_2 + b_1$
 \end{definicija}
+
+\begin{trditev}
+    Relacija $\leq$ je dobro definirana.
+\end{trditev}
+\begin{dokaz}
+    Naj bosta $(0, c) \leq (0, d)$, potem je tudi za poljubna elementa iz njunih ekvivalenčnih razredov velja ista relacija: \\
+    $(a, c + a) \leq (b, d + b) \iff a + d + b \leq c + d + b \iff a \leq c \iff (0, c) \leq (0, d)$.\\
+    Podoben razmislek velja za ostale tri primere.
+\end{dokaz}
 
 \begin{trditev}
     $(Z, \leq)$ je linearno urejena.
@@ -155,8 +183,9 @@
         $a_1 + b_2 \leq a_2 + b_1 \wedge b_1 + a_2 \leq b_2 + a_1 \implies$ \\
         $a_1 + b_2 = b_1 + a_2 \implies (a_1, a_2) = (b_1, b_2)$
         \item $a \leq b \vee b \leq a$ \\
-        $(a_1, a_2) \leq (b_1, b_2) \vee (b_1, b_2) \leq (a_1, a_2) \iff$
+        $(a_1, a_2) \leq (b_1, b_2) \vee (b_1, b_2) \leq (a_1, a_2) \iff$ \\
         $a_1 + b_2 \leq b_1 + a_2 \vee a_2 + b_1 \leq b_2 + a_1$ \\
         kar pa velja iz naravnih števil.
     \end{itemize}
 \end{dokaz}
+
