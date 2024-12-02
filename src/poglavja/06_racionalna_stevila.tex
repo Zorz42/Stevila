@@ -79,4 +79,34 @@
     Naj bo $\frac{a_1}{a_2} = \frac{b_1}{b_2}$, torej $a_1 b_2 = a_2 b_1$.
     Potem $\frac{a_1}{a_2} \frac{c_1}{c_2} = \frac{a_1 c_2}{a_2 c_2} = \frac{a_1 c_2 b_1}{a_2 c_2 b_1} = $
     $\frac{a_1 c_2 b_1}{a_1 c_2 b_2} = \frac{c_1 b_1}{b_2 c_2} = \frac{b_1}{b_2} \frac{c_1}{c_2}$
+    Podoben razmislek je tudi za drugo stran.
 \end{dokaz}
+
+\begin{trditev}
+    $(\mathbb{Q}, \cdot)$ tvori komutativni monoid, ter za vse $x \in \mathbb{Q} \setminus \{0\}$ obstaja inverz.
+\end{trditev}
+\begin{dokaz}
+    \begin{itemize}
+        \item $a(bc) = (ab)c$ \\
+        $\left(\frac{a_1}{a_2} \frac{b_1}{b_2}\right) \frac{c_1}{c_2} = \frac{a_1 b_1 c_1}{a_2 b_2 c_2} = \frac{a_1}{a_2} \left(\frac{b_1}{b_2} \frac{c_1}{c_2}\right)$
+        \item $1a = a1 = a$ \\
+        $\frac{1}{1} \frac{a}{b} = \frac{a}{b} \frac{1}{1} = \frac{a}{b}$
+        \item $ab = ba$ \\
+        $\frac{a_1}{a_2} \frac{b_1}{b_2} = \frac{a_1 b_1}{a_2 b_2} = \frac{b_1}{b_2} \frac{a_1}{a_2}$
+        \item $a a^{-1} = 1$, $a \neq 0$ \\
+        $\frac{a}{b} \frac{b}{a} = \frac{ab}{ba} = \frac{1}{1}$
+    \end{itemize}
+\end{dokaz}
+
+\begin{trditev}
+    Vsak ulomek lahko zapišemo kot $\frac{a}{b}$, kjer $a,b \in \mathbb{Z}$ in $b > 0$
+\end{trditev}
+\begin{dokaz}
+    Če je $b > 0$ smo že končali.
+    Če je pa $b < 0$, pa vzamemo ulomek $\frac{-a}{-b}$
+\end{dokaz}
+
+\begin{definicija}
+    $\frac{a}{b} \leq \frac{c}{d}$ definiramo kot $ad \leq bc$, kjer $b, d > 0$ \\
+    $\frac{a}{b} < \frac{c}{d}$ definiramo kot $ad < bc$, kjer $b, d > 0$
+\end{definicija}
