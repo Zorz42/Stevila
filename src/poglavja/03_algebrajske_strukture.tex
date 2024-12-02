@@ -116,15 +116,49 @@
 \end{definicija}
 
 \begin{definicija}
-    $(A, +, \cdot)$ je polje, če sta $(A, +)$ in $(A, \cdot)$ Abelovi grupi, ter velja $a(b + c) = ab + ac$.
+    $(A, +, \cdot)$ je polje, če sta $(A, +)$ in $(A, \cdot)$ Abelovi grupi, ter velja $a(b + c) = ab + ac$ z izjemo, da $0$ nima inverza.
+    Enoto v $+$ označimo z $0$, enoto v $\cdot$ pa označimo z $1$.
 \end{definicija}
+
+\begin{trditev}
+    Naj bo $(A, +, \cdot)$ polje.
+    Potem velja: $a \cdot 0 = 0$
+\end{trditev}
+\begin{dokaz}
+    $a0 = a(0 + 0) = a0 + a0 \implies a0 = 0$
+\end{dokaz}
+
+\begin{trditev}
+    Naj bo $(A, +, \cdot)$ polje.
+    Potem velja: $-1a = -a$
+\end{trditev}
+\begin{dokaz}
+    $0 = a(-1 + 1) = -1a + a \implies -1a = -a$
+\end{dokaz}
+
+\begin{trditev}
+    Naj bo $(A, +, \cdot)$ polje.
+    Potem velja: $(-a)(-b) = a\cdot b$
+\end{trditev}
+\begin{dokaz}
+
+\end{dokaz}
 
 \begin{definicija}
     $(A, +, \cdot, P)$ je urejena polje, če je $(A, +, \cdot)$ polje, ter velja:
     \begin{itemize}
-        \item ali je $a \in P$ ali pa $-a \in P$ za vse $a \neq 0$
+        \item $a \in P \vee -a \in P$ za vse $a \neq 0$
         \item $0 \notin P$
         \item $a, b \in P \implies a + b \in P$
         \item $a, b \in P \implies ab \in P$
     \end{itemize}
+    Če je $a \in P$ mu rečemo pozitivno število.
 \end{definicija}
+
+\begin{trditev}
+    $1$ je pozitiven element urejenega polja.
+\end{trditev}
+\begin{dokaz}
+    Naj bo $-1$ pozitiven.
+    Potem je
+\end{dokaz}

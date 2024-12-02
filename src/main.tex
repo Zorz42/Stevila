@@ -15,14 +15,16 @@
 % naslov dokumenta
 \title{Števila}
 
+\definecolor{gray1}{RGB}{150,150,150}
+\definecolor{gray2}{RGB}{180,180,180}
+
 % okolje definicije in trditve
-\newmdtheoremenv{definicija}{Definicija}
-\newmdtheoremenv{trditev}{Trditev}
+\newmdtheoremenv[linecolor=gray1,linewidth=2pt]{definicija}{Definicija}
+\newmdtheoremenv[linecolor=gray2,linewidth=2pt]{trditev}{Trditev}
 \newenvironment{dokaz}{\paragraph{Dokaz:}}{\hfill$\square$}
 
 % Document
 \begin{document}
-
     \maketitle
     \pagebreak
 
