@@ -138,10 +138,10 @@
 
 \begin{trditev}
     Naj bo $(A, +, \cdot)$ polje.
-    Potem velja: $(-a)(-b) = a\cdot b$
+    Potem velja: $(-a)b = a(-b) = -ab$
 \end{trditev}
 \begin{dokaz}
-
+    $(-a)b = -1ab = -ab = -1ab = a(-1)b = a(-b)$
 \end{dokaz}
 
 \begin{definicija}
@@ -156,9 +156,66 @@
 \end{definicija}
 
 \begin{trditev}
+    Ali je $a$ pozitivno ali pa $-a$, ne pa obe za $a \neq 0$.
+\end{trditev}
+\begin{dokaz}
+    Predpostavimo, da je $a$ pozitivno in $-a$ pozitivno.
+    Potem je tudi $a + (-a) = 0$ pozitivno, kar je protislovje.
+\end{dokaz}
+
+\begin{trditev}
     $1$ je pozitiven element urejenega polja.
 \end{trditev}
 \begin{dokaz}
     Naj bo $-1$ pozitiven.
-    Potem je
+    Potem je $(-1)(-1) = 1$ pozitiven, kar je protislovje.
+\end{dokaz}
+
+\begin{definicija}
+    $a > b \iff a - b \in P$ za neko urejeno polje. \\
+    $a \leq b \iff a < b \vee a = b$ \\
+    Opomba iz definicije direktno sledi, da so pozitivna števila vsa, za katera velja: $a > 0$.
+\end{definicija}
+
+\begin{trditev}
+    Urejeno polje z relacijo $\leq$ je linearno urejeno.
+\end{trditev}
+\begin{dokaz}
+    \begin{itemize}
+        \item $a \leq a$ \\
+        Sledi iz definicije.
+        \item $a \leq b \wedge b \leq a \implies a = b$ \\
+        Torej obstajata $a, b$, da bo $a < b$ in $b < a$.
+        Iz tega sledi, da sta $a - b$ in $b - a$ obe pozitivni, kar je protislovje.
+        \item $a \leq b \wedge b \leq c \implies a \leq c$ \\
+        Glejmo primer, kjer so si $a, b, c$ različni, ker če ne je trivialno.
+        $a < b \wedge b < c \implies b - a \in P \wedge c - b \in P \implies b - a + c - b \in P \implies c - a \in P \implies a < c$
+        \item $a \leq b \vee b \leq a$ \\
+        Če sta $a, b$ enaka je spet trivialno.
+        Naj bosta potem različna.
+        $a < b \vee b < a \implies b - a \in P \wedge a - b \in P$, kar je pa protislovje.
+    \end{itemize}
+\end{dokaz}
+
+\begin{trditev}
+    Za urejeno polje velja pravilo seštevanja in množenja. \\
+    $a < b \wedge c < d \implies a + c < b + d$ \\
+    $a < b \wedge c \in P \implies ac < bc$ \\
+    $a < b \wedge c < d \wedge a, b, c, d \in P \implies ac < bd$
+\end{trditev}
+\begin{dokaz}
+    Najprej seštevanje.
+    $a < b \wedge c < d \implies b - a + d - c \in P \implies b + d - (a + c) \in P \implies a + c < b + d$ \\
+    Še množenje.
+    $a < b \wedge c \in P \implies c(b - a) \in P \implies cb - ca \in P \implies ac < bc$ \\
+    $a < b \wedge c < d \wedge a, b, c, d \in P \implies ac < bc \wedge bc < bd \implies ac < bd$
+\end{dokaz}
+
+\begin{trditev}
+    Kvadrat je vedno pozitiven. \\
+    $a \neq 0 \implies a^2 \in P$
+\end{trditev}
+\begin{dokaz}
+    Če je $a$ pozitiven, je trivialno
+    Če je $-a$ pozitiven, je $(-a)(-a) = a^2$ pozitiven.
 \end{dokaz}
